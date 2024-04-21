@@ -25,6 +25,7 @@ Long term after getting familiar with the data, this would be part of the ML pip
 
 ## Would you change anything if you would need to scale this process from a few SKU's to hundreds and thousands.
 As mentioned above, the atc replacement was done in a way to future proof. If the dataset becomes much larger and contains a variety of SKUs then we cant impute based on the modal across all SKUs, we need to group things.
+In general though, we should approach the data as if it is a large amount and the process will then be scalable from the start.
 
 ## Other Notes
 Deleting data is never ideal, ultimately this was done because the rows contained values that are too extreme. However in a real world scenario, these rows may need to instead be highlighted to the team and they can go to the relevant sources to correct the data to create an accurate prediction.
