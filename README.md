@@ -9,6 +9,8 @@ I have manually identified issues with dates and date ranges. However, with me n
 
 I've created a new "actual_months" column as it may be a useful column.
 
+For the winner_price field, its difficult to identify an outlier without having more knowledge of the data. I've manually removed values below 0.001 and above 0.05. However, I suspect there may be outliers in the upper range still. I have also made sure to remove any NaN values if they occur.
+
 
 ## What automated approaches can you use?
 I've automated the identification of anomalies by removing values where they exceed thresholds using the interquartile range and upper and lower quartiles. I attempted to use the Z-score but due to the extreme nature of some values, it made others not look as extreme.
@@ -18,6 +20,8 @@ I have also replaced missing values (atc) with the modal value where it shares t
 To ensure there are no price formatting issues with scientific notation in the concatenated strings, I have stripped these and then reformatted before joining them together again.
 
 I did a lot of work in a jupyter notebook to cleanly display the process, but for an automated approach I would just use a .py file.
+
+With more data you can get a better understanding of what is deemed normal for the dataset and from here we can create automated rules to identify issues.
 
 
 ## How would you improve this process long term and how would you build your roadmap?
